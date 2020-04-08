@@ -1,6 +1,8 @@
 bloom: 
 a procrastination helper for android, which disables all access to other functionalities for a certain time and helps you to focus on your current task.
 
+emulator used: Pixel 3xl API 26
+
 Xinyin's Division of labour:
   1. Select time page: a slider bar for users to select the time period they want to focus on.
   2. Countdown timer
