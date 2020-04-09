@@ -14,7 +14,9 @@ Xinyin's Division of labour:
 Resources:
 Coin Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
-Flower backgrounds drawn by Waleed Ashfaq.
+Store background taken from: https://www.vectorstock.com/royalty-free-vector/facade-of-a-shop-store-or-pharmacy-background-vector-3958970
+
+Flower backgrounds, icons drawn by Waleed Ashfaq.
 
 Demo Video:
 https://www.youtube.com/watch?v=xIbyRZ_xTU4&feature=youtu.be
