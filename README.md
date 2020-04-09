@@ -11,5 +11,9 @@ Xinyin's Division of labour:
   5. UI of alive flower & UI of dead flower.
   6. UI of geofencing: a recyclerview which allows users to add their current locations. The user could also delete locations at any time by clicking the delete icon.
 
+Resources:
+Coin Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Flower backgrounds drawn by Waleed Ashfaq.
+
 Demo Video:
 https://www.youtube.com/watch?v=xIbyRZ_xTU4&feature=youtu.be
