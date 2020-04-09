@@ -70,6 +70,7 @@ public class MainHomepage extends AppCompatActivity {
                 String clickedItemName = clickedItem.getWhatToDo();
 
                 SharedPreferences myPrefs;
+                // create shared preference file: tagpage
                 myPrefs = getSharedPreferences("tagpage", MODE_PRIVATE);
                 SharedPreferences.Editor editor = myPrefs.edit();
                 editor.putString("curr_tag", clickedItemName);//store the current last selected tag

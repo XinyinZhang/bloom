@@ -87,9 +87,11 @@ public class TimeCountDownActivity extends AppCompatActivity implements TimerCan
             editor.commit();
             editor.putString("dead_flower", "0");
             editor.commit();
+            editor.putInt("coinNum", 0);
             //editor.putString("modify", "yes");
-            //editor.commit();
+            editor.commit();
         }
+
 
         //Check for dnd access
         dnd = new dndHandler(this);
@@ -124,7 +126,7 @@ public class TimeCountDownActivity extends AppCompatActivity implements TimerCan
         CD_startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(CD_is_timer_running){
+                if(CD_is_timer_running){ // press cancel button
                     warning_PopUp();
                 }
                 else {
@@ -170,7 +172,16 @@ public class TimeCountDownActivity extends AppCompatActivity implements TimerCan
                 int num = Integer.parseInt(fnum.trim()) + 1;
                 editor = myPrefs.edit();
                 editor.putString("alive_flower", Integer.toString(num));
-                editor.apply();
+                editor.commit();
+
+                //reward 10 coins for each successfully planted flower
+                int cnum = myPrefs.getInt("coinNum",0);
+                int num_c = cnum + 10;
+                editor.putInt("coinNum", num_c);
+                editor.commit();
+
+
+
                 thePrefs = getSharedPreferences("tagpage", MODE_PRIVATE);
                 long time_num = thePrefs.getLong("set_time",0);
                 String tagnow = thePrefs.getString("curr_tag",null);
@@ -233,7 +244,7 @@ public class TimeCountDownActivity extends AppCompatActivity implements TimerCan
                     }
                 });
             }
-        },300000);
+        },5000); //300000 for real app
     }
 
     //Timer starts to keep track for how long the user has left the activity
@@ -263,10 +274,10 @@ public class TimeCountDownActivity extends AppCompatActivity implements TimerCan
                 Timer.cancel();
                 CD_is_timer_running = false;
                 myPrefs = getSharedPreferences("prefID", MODE_PRIVATE);
-                String fnum = myPrefs.getString("alive_flower",null);
+                String fnum = myPrefs.getString("dead_flower",null);
                 int num = Integer.parseInt(fnum.trim()) + 1;
                 editor = myPrefs.edit();
-                editor.putString("alive_flower", Integer.toString(num));
+                editor.putString("dead_flower", Integer.toString(num));
                 editor.apply();
                 dnd.turnOffDnd();
                 Intent intent = new Intent(TimeCountDownActivity.this, FlowerDeadActivity.class);

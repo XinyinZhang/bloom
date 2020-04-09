@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bloom.iml" filepath="$PROJECT_DIR$/bloom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bloom_xy.iml" filepath="$PROJECT_DIR$/bloom_xy.iml" group="bloom_xy" />
+      <module fileurl="file://$PROJECT_DIR$/app/bloom_xy-app.iml" filepath="$PROJECT_DIR$/app/bloom_xy-app.iml" group="bloom_xy/app" />
     </modules>
   </component>
 </project>

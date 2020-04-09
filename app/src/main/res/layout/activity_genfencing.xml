@@ -17,12 +17,12 @@
 
     <ImageView
         android:id="@+id/icon_addLoc"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="580dp"
+        android:layout_marginBottom="702dp"
         android:src="@drawable/ic_add_location" />
 
 </RelativeLayout>

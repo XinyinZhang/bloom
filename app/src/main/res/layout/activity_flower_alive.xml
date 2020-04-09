@@ -10,6 +10,7 @@
     android:background="@drawable/sunflower_level3">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="331dp"
         android:layout_height="99dp"
         android:layout_alignParentStart="true"
@@ -22,13 +23,35 @@
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="5"
-        android:text="Congratulations! You have planted a flower into your garden."
+        android:text="Congratulations! You have planted a flower into your garden and get a reward of 10 coins."
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
 
-
     <include layout="@layout/bottom_nav_bar" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="694dp"
+        android:background="@drawable/custom_buttom"
+        android:padding="5dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/icon_coin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="694dp"
+        android:src="@drawable/coin" />
 
 </RelativeLayout>
