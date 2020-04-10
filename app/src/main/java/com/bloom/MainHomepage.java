@@ -27,6 +27,9 @@ public class MainHomepage extends AppCompatActivity {
         overridePendingTransition(0, 0);
         setContentView(R.layout.activity_homepage);
 
+
+
+
         //add navBar listener
         navBar = new navBarListener( (BottomNavigationView) findViewById(R.id.navBar), this);
 

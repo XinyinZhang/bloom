@@ -34,7 +34,7 @@
             android:layout_marginBottom="449dp"
             android:background="@drawable/custom_buttom"
             android:padding="5dp"
-            android:text="      50"
+            android:text="       50"
 
             />
 
@@ -47,6 +47,76 @@
             android:layout_marginEnd="300dp"
             android:layout_marginBottom="449dp"
             android:src="@drawable/coin" />
+
+        <ImageView
+            android:id="@+id/icon_rose"
+            android:layout_width="148dp"
+            android:layout_height="250dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="413dp"
+            android:src="@drawable/f2" />
+
+        <TextView
+
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="449dp"
+            android:background="@drawable/custom_buttom"
+            android:padding="5dp"
+            android:text="       80"
+
+            />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="113dp"
+            android:layout_marginBottom="449dp"
+            android:src="@drawable/coin" />
+
+
+        <ImageView
+            android:id="@+id/icon_lily"
+            android:layout_width="189dp"
+            android:layout_height="393dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="196dp"
+            android:layout_marginBottom="128dp"
+            android:src="@drawable/f3" />
+
+        <TextView
+
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="257dp"
+            android:layout_marginBottom="230dp"
+            android:background="@drawable/custom_buttom"
+            android:padding="5dp"
+            android:text="       80"
+
+            />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="300dp"
+            android:layout_marginBottom="230dp"
+            android:src="@drawable/coin" />
+
     </RelativeLayout>
 
     <TextView
