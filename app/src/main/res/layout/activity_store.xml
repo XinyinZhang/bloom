@@ -132,7 +132,7 @@
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="5"
-        android:text="Store"
+        android:text="STORE"
         android:textColor="@color/white"
         android:textSize="50sp"
         android:textStyle="bold" />
