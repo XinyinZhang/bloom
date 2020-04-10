@@ -59,7 +59,7 @@
             android:src="@drawable/f2" />
 
         <TextView
-
+            android:id="@+id/textview_rose"
             android:layout_width="66dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -94,7 +94,7 @@
             android:src="@drawable/f3" />
 
         <TextView
-
+            android:id="@+id/textview_lily"
             android:layout_width="66dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

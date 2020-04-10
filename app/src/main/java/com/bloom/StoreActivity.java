@@ -20,6 +20,7 @@ public class StoreActivity extends AppCompatActivity {
     private int f_num;
     private Boolean is_lily_locked;
     private Boolean is_rose_locked;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,8 +114,9 @@ public class StoreActivity extends AppCompatActivity {
         iv_lily.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //check if coinNum >= 80 and if lily is already unlocked
+                if(is_lily_locked){
                 AlertDialog.Builder dialog = new AlertDialog.Builder(StoreActivity.this);
-                dialog.setMessage("Do you want to buy a lily")
+                dialog.setMessage("Do you want to buy a lily?")
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -124,9 +126,9 @@ public class StoreActivity extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                if (c_num < 80){
+                                if (c_num < 80) {
                                     AlertDialog.Builder c_dialog = new AlertDialog.Builder(StoreActivity.this);
-                                    c_dialog.setMessage("You don't have enough coins")
+                                    c_dialog.setMessage("You don't have enough coins!")
                                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                                 @Override
                                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -135,21 +137,7 @@ public class StoreActivity extends AppCompatActivity {
                                             });
                                     AlertDialog c_alert = c_dialog.create();
                                     c_alert.show();
-                                }
-                                else if (!is_lily_locked){ //lily is already unlocked
-                                    AlertDialog.Builder u_dialog = new AlertDialog.Builder(StoreActivity.this);
-                                    u_dialog.setMessage("The lily is already unlocked.")
-                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialogInterface, int i) {
-
-                                                }
-                                            });
-                                    AlertDialog u_alert = u_dialog.create();
-                                    u_alert.show();
-                                }
-
-                                else { //unlock lily, coin - 80
+                                } else { //unlock lily, coin - 80
                                     editor = l_Prefs.edit();
                                     editor.putBoolean("locked_lily", false);
                                     editor.apply();
@@ -161,7 +149,7 @@ public class StoreActivity extends AppCompatActivity {
                                     //a dialog box to indicate purchase succeed
                                     AlertDialog.Builder s_dialog = new AlertDialog.Builder(StoreActivity.this);
                                     s_dialog.setTitle("Purchase succeed")
-                                            .setMessage("You have unlocked the lily. You now have "+c_num+" coins left.")
+                                            .setMessage("You have unlocked the lily. You now have " + c_num + " coins left.")
                                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                                 @Override
                                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -175,9 +163,98 @@ public class StoreActivity extends AppCompatActivity {
                         });
                 AlertDialog alert = dialog.create();
                 alert.show();
+                }
+                else {
+                    //lily is already unlocked
+                        AlertDialog.Builder u_dialog = new AlertDialog.Builder(StoreActivity.this);
+                        u_dialog.setMessage("The lily is already unlocked!")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
+                                });
+                        AlertDialog u_alert = u_dialog.create();
+                        u_alert.show();
+
+                }
 
             }
         });
+
+        iv_rose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(StoreActivity.this);
+                if (!is_rose_locked){
+                    //rose is already unlocked
+
+                    dialog.setMessage("The rose is already unlocked!")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    AlertDialog u_alert = dialog.create();
+                    u_alert.show();
+                }
+                else {
+                    dialog.setMessage("Do you want to buy a rose?")
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            })
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    //check if coins >= 80
+                                    if (c_num < 80){
+                                        dialog.setMessage("You don't have enough coins!")
+                                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                    }
+                                                });
+                                        AlertDialog c_alert = dialog.create();
+                                        c_alert.show();
+                                    }
+                                    else {
+                                        //unlock rose
+                                        editor = l_Prefs.edit();
+                                        editor.putBoolean("locked_rose", false);
+                                        editor.apply();
+                                        //coin - 80
+                                        editor = c_Prefs.edit();
+                                        c_num = c_num - 80;
+                                        editor.putInt("coinNum", c_num);
+                                        editor.apply();
+                                        //a dialog box to indicate purchase succeed
+
+                                        dialog.setTitle("Purchase succeed")
+                                                .setMessage("You have unlocked the rose. You now have " + c_num + " coins left.")
+                                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                    }
+                                                });
+                                        AlertDialog s_alert = dialog.create();
+                                        s_alert.show();
+                                    }
+                                }
+                            });
+                    AlertDialog alert = dialog.create();
+                    alert.show();
+                }
+
+
+            }
+        });
+
         }
 
 }

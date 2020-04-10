@@ -20,6 +20,7 @@ public class MainHomepage extends AppCompatActivity {
     private Button NextButton;
     private navBarListener navBar;
     private Button LocationButton;
+    private Button StoreButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,16 @@ public class MainHomepage extends AppCompatActivity {
             public void onClick(View view) {
                 // open a new activity
                 Intent intent = new Intent(MainHomepage.this, genfencing.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
+        StoreButton = findViewById(R.id.button_store);
+        StoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainHomepage.this, StoreActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
             }
