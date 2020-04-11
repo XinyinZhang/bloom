@@ -12,8 +12,8 @@ Xinyin's Division of labour:
   6. UI of geofencing: a recyclerview which allows users to add their current locations. The user could also delete locations at any time by clicking the delete icon.
   7. Store feature & Currency system[not in demo video]: 
   For each successfully planted flower by the user, the system will reward the user with 10 coins. These coins can be used to buy different goods in the store. The user can enter the store from alive flower/dead flower page by clicking the coin icon. The goods in the store are: 
-    Magic potion: used to revive a dead flower. 
-    Rose / lily: Unlock the rose/lily which allows the user to plant this type of flower into the garden. Can only be purchased once. 
+    - Magic potion: used to revive a dead flower. 
+    - Rose / lily: Unlock the rose/lily which allows the user to plant this type of flower into the garden. Can only be purchased once. 
   
 
 Resources:
