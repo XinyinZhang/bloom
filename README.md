@@ -10,6 +10,7 @@ Xinyin's Division of labour:
   4. Break button: Once the user activates the timer, a break button will be available allowing for the user to take a break for a period of 5 minutes before resuming the countdown. User can feel free to leave the app during this period, and the flower will not be killed. However, if the user is away from Bloom after break is over, the flower is killed.
   5. UI of alive flower & UI of dead flower.
   6. UI of geofencing: a recyclerview which allows users to add their current locations. The user could also delete locations at any time by clicking the delete icon.
+  7. Store feature & Currency system:
 
 Resources:
 Coin icon，potion icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
