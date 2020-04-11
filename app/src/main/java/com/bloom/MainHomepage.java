@@ -20,14 +20,14 @@ public class MainHomepage extends AppCompatActivity {
     private Button NextButton;
     private navBarListener navBar;
     private Button LocationButton;
-    private Button StoreButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(0, 0);
         setContentView(R.layout.activity_homepage);
-
 
 
 
@@ -45,6 +45,14 @@ public class MainHomepage extends AppCompatActivity {
             }
         });
 
+       // SharedPreferences Prefs = getSharedPreferences("prefID", MODE_PRIVATE);
+       // int c_num = Prefs.getInt("coinNum", 0);
+       // NextButton.setText(c_num);
+
+
+
+
+
         LocationButton = findViewById(R.id.button_location);
         LocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,15 +64,7 @@ public class MainHomepage extends AppCompatActivity {
             }
         });
 
-        StoreButton = findViewById(R.id.button_store);
-        StoreButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainHomepage.this, StoreActivity.class);
-                startActivity(intent);
-                overridePendingTransition(0, 0);
-            }
-        });
+
 
         ViewPager viewPager = findViewById(R.id.viewpager);
         ImageAdapter adapter = new ImageAdapter(this);
@@ -89,6 +89,12 @@ public class MainHomepage extends AppCompatActivity {
                 SharedPreferences.Editor editor = myPrefs.edit();
                 editor.putString("curr_tag", clickedItemName);//store the current last selected tag
                 editor.commit();
+
+
+
+
+
+
             }
 
             @Override

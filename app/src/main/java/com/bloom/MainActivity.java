@@ -1,5 +1,6 @@
 package com.bloom;
 
+import android.content.SharedPreferences;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,11 +29,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // open a new activity
+                //Intent intent = new Intent(MainActivity.this, MainHomepage.class);
                 Intent intent = new Intent(MainActivity.this, MainHomepage.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
             }
         });
+
+        //SharedPreferences myPrefs = getSharedPreferences("prefID", MODE_PRIVATE);
+        //!sharedPreferences.getString(NAME,"Default value").equals("Default value")
+       /* if (myPrefs.getString("alive_flower","Infinite").equals( "Infinite")) { //first time open app
+            SharedPreferences.Editor editor = myPrefs.edit();
+            editor.putInt("coinNum", 0);
+            //editor.putString("modify", "yes");
+            editor.commit();
+        }*/
+
     }
     long userInteractionTime = 0;
 

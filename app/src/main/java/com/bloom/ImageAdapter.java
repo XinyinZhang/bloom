@@ -44,7 +44,6 @@ public class ImageAdapter extends PagerAdapter {
                 Boolean is_rose_locked = l_Prefs.getBoolean("locked_rose", true);
 
 
-
                 if (position == 0) {
                     editor.putString("flower_type", "f1");
                     editor.commit();
