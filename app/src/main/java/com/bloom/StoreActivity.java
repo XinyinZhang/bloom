@@ -2,6 +2,7 @@ package com.bloom;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,11 +22,14 @@ public class StoreActivity extends AppCompatActivity {
     private Boolean is_lily_locked;
     private Boolean is_rose_locked;
 
+    private navBarListener navBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
         c_Prefs = getSharedPreferences("prefID", MODE_PRIVATE);
+        navBar = new navBarListener( (BottomNavigationView) findViewById(R.id.navBar), this);
 
         f_num = Integer.parseInt(c_Prefs.getString("dead_flower",null));
         c_num = c_Prefs.getInt("coinNum", 0);
