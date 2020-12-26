@@ -1,5 +1,7 @@
 bloom: 
 a procrastination helper for android, which disables all access to other functionalities for a certain time and helps you to focus on your current task.
+By spending time away from their phones, users grow virtual flowers and earn coins, which can then be used to unlock different features.
+It targets to users who rely on mobile phones and have difficulty focusing.
 
 emulator used: Pixel 3XL, API 26
 
