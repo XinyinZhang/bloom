@@ -3,6 +3,9 @@ a procrastination helper for android, which disables all access to other functio
 By spending time away from their phones, users grow virtual flowers and earn coins, which can then be used to unlock different features.
 It targets to users who rely on mobile phones and have difficulty focusing.
 
+A video demo of this project can be found at:
+https://www.youtube.com/watch?v=xIbyRZ_xTU4&feature=youtu.be
+
 emulator used: Pixel 3XL, API 26
 
 Xinyin's Division of labour:
@@ -23,5 +26,3 @@ Coin icon，potion icon made by <a href="https://www.flaticon.com/authors/freepi
 
 Flower backgrounds and icon drawn by Waleed Ashfaq.
 
-Demo Video:
-https://www.youtube.com/watch?v=xIbyRZ_xTU4&feature=youtu.be
